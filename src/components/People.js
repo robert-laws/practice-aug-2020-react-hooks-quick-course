@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Person from './Person';
 import PersonForm from './PersonForm';
+import NewestPerson from './NewestPerson';
 
 const People = () => {
   const [people, setPeople] = useState([
@@ -27,6 +28,8 @@ const People = () => {
       </ul>
       <hr />
       <PersonForm addNewPerson={addNewPerson} />
+      <hr />
+      <NewestPerson newPerson={people[people.length - 1]} />
     </div>
   );
 };
